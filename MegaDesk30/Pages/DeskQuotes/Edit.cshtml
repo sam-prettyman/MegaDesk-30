@@ -1,0 +1,55 @@
+﻿@page
+@model MegaDesk30.Pages.DeskQuotes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>DeskQuote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DeskQuote.ID" />
+            <div class="form-group">
+                <label asp-for="DeskQuote.rushDays" class="control-label"></label>
+                <input asp-for="DeskQuote.rushDays" class="form-control" />
+                <span asp-validation-for="DeskQuote.rushDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.customerName" class="control-label"></label>
+                <input asp-for="DeskQuote.customerName" class="form-control" />
+                <span asp-validation-for="DeskQuote.customerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.quoteDate" class="control-label"></label>
+                <input asp-for="DeskQuote.quoteDate" class="form-control" />
+                <span asp-validation-for="DeskQuote.quoteDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.shippingCost" class="control-label"></label>
+                <input asp-for="DeskQuote.shippingCost" class="form-control" />
+                <span asp-validation-for="DeskQuote.shippingCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.deskPrice" class="control-label"></label>
+                <input asp-for="DeskQuote.deskPrice" class="form-control" />
+                <span asp-validation-for="DeskQuote.deskPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

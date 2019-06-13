@@ -1,0 +1,49 @@
+﻿@page
+@model MegaDesk30.Pages.DeskQuotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeskQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.rushDays)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.rushDays)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.customerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.customerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.quoteDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.quoteDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.shippingCost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.shippingCost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.deskPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.deskPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
