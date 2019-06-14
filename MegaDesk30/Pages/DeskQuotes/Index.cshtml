@@ -18,42 +18,33 @@
 <table class="table">
     <thead>
         <tr>
+            
+           
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].rushDays)
+                @Html.DisplayNameFor(model => model.DeskQuote)
             </th>
+            
+            
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].customerName)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].quoteDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].shippingCost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].deskPrice)
-            </th>
+        
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.DeskQuote) {
         <tr>
+
             <td>
-                @Html.DisplayFor(modelItem => item.rushDays)
+                @Html.DisplayNameFor(model => item.newDesk.newMaterial.MaterialType)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.customerName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.quoteDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.shippingCost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.deskPrice)
-            </td>
+
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

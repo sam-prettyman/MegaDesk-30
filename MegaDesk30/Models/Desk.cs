@@ -11,9 +11,24 @@ namespace MegaDesk30.Models
         public int width { get; set; }
         public int depth { get; set; }
         public int numDrawers { get; set; }
-        public int surfaceMaterial { get; set; }
+        public Material newMaterial { get; set; }
+
+        // Non-Default Constructor 
+       /* public Desk(int newWidth, int newDepth, int newDrawers, int newMaterial)
+        {
+            this.width = newWidth;
+            this.depth = newDepth;
+            this.numDrawers = newDrawers;
+            this.newMaterial.ID = newMaterial;
+        }
+
+    */
+        public decimal surfaceArea()
+        {
+            return width * depth;
+        }
 
 
-       
+
     }
 }

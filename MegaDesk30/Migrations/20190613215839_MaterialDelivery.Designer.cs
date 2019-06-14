@@ -4,14 +4,16 @@ using MegaDesk30.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MegaDesk30.Migrations
 {
     [DbContext(typeof(MegaDesk30Context))]
-    partial class MegaDesk30ContextModelSnapshot : ModelSnapshot
+    [Migration("20190613215839_MaterialDelivery")]
+    partial class MaterialDelivery
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,15 +44,13 @@ namespace MegaDesk30.Migrations
 
                     b.Property<int>("depth");
 
-                    b.Property<int?>("newMaterialID");
-
                     b.Property<int>("numDrawers");
+
+                    b.Property<int>("surfaceMaterial");
 
                     b.Property<int>("width");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("newMaterialID");
 
                     b.ToTable("Desk");
                 });
@@ -93,13 +93,6 @@ namespace MegaDesk30.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Material_1");
-                });
-
-            modelBuilder.Entity("MegaDesk30.Models.Desk", b =>
-                {
-                    b.HasOne("MegaDesk30.Models.Material", "newMaterial")
-                        .WithMany()
-                        .HasForeignKey("newMaterialID");
                 });
 
             modelBuilder.Entity("MegaDesk30.Models.DeskQuote", b =>

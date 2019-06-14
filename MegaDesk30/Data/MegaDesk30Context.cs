@@ -17,5 +17,8 @@ namespace MegaDesk30.Models
         public DbSet<MegaDesk30.Models.Desk> Desk { get; set; }
 
         public DbSet<MegaDesk30.Models.DeskQuote> DeskQuote { get; set; }
+        public object Material { get; internal set; }
+        public DbSet<MegaDesk30.Models.Delivery> Delivery { get; set; }
+        public DbSet<MegaDesk30.Models.Material> Material_1 { get; set; }
     }
 }

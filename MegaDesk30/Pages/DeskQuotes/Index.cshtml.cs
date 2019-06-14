@@ -20,6 +20,10 @@ namespace MegaDesk30.Pages.DeskQuotes
 
         public IList<DeskQuote> DeskQuote { get;set; }
         [BindProperty(SupportsGet = true)]
+        public IList<Desk> Desk { get; set; }
+        public IList<Delivery> Delivery { get; set; }
+        public IList<Material> Material { get; set; }
+
         public string SearchString { get; set; }
 
         public async Task OnGetAsync()
@@ -31,7 +35,6 @@ namespace MegaDesk30.Pages.DeskQuotes
                 custNames = custNames.Where(c => c.customerName.Contains(SearchString));
             }
             
-
             DeskQuote = await custNames.ToListAsync();
         }
     }

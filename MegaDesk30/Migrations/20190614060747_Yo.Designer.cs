@@ -4,14 +4,16 @@ using MegaDesk30.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MegaDesk30.Migrations
 {
     [DbContext(typeof(MegaDesk30Context))]
-    partial class MegaDesk30ContextModelSnapshot : ModelSnapshot
+    [Migration("20190614060747_Yo")]
+    partial class Yo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
